@@ -1,0 +1,38 @@
+[
+    {
+      "id": "9a1b0bf5-6cac-4ea6-a0fb-bf139df9a2cf",
+      "from": "Nguyễn Thế Vinh",
+      "date": "Wed Sep 10 2008 01:23:35 GMT+0200 (Central European Summer Time)",
+      "img": "https://avatars.githubusercontent.com/u/34943910",
+      "msg": "Hello UET",
+      "read": true,
+      "unreadCount": 2
+    },
+    {
+      "id": "9a1b0bf5-6cac-4ea6-a0fb-bf139dc9a2cf",
+      "from": "Bùi Tùng Lâm",
+      "date": "Wed Sep 10 2008 01:23:35 GMT+0200 (Central European Summer Time)",
+      "img": "https://avatars.githubusercontent.com/u/92492273",
+      "msg": "All in chưa, tau vừa Long",
+      "read": true,
+      "unreadCount": 2
+    },
+    {
+      "id": "9a1b0bf5-6csdc-4ea6-a0fb-bf139dc9a2cf",
+      "from": "Trọng Hiếu (Gay)",
+      "date": "Wed Sep 10 2008 01:23:35 GMT+0200 (Central European Summer Time)",
+      "img": "https://avatars.githubusercontent.com/u/130862796?s=200&v=4",
+      "msg": "T vừa làm vài lệnh",
+      "read": true,
+      "unreadCount": 2
+    },
+    {
+      "id": "9a1b0bf5-6cdc-4ea6-a0fb-bf139dc9a2cf",
+      "from": "Thiên Trường (Trai đẹp)",
+      "date": "Wed Sep 10 2008 01:23:35 GMT+0200 (Central European Summer Time)",
+      "img": "https://avatars.githubusercontent.com/u/125329850",
+      "msg": "T vừa làm vài lệnh",
+      "read": true,
+      "unreadCount": 2
+    }
+  ]

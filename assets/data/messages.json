@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "from": 0,
+    "date": "2024-06-07T09:00:00+07:00",
+    "msg": "Ê lũ lười, mai có đứa nào đi học không đấy?"
+  },
+  {
+    "id": "2",
+    "from": 1,
+    "date": "2024-06-07T09:00:30+07:00",
+    "msg": "Tao đi, mày không đi thì nghỉ luôn đi cho khoẻ :)) Mai kiểm tra toán đấy, đừng có ngủ quên"
+  },
+  {
+    "id": "3",
+    "from": 2,
+    "date": "2024-06-07T09:01:00+07:00",
+    "msg": "Đm, ai làm xong bài lý chưa, share tao với, tối qua cày game quên mẹ nó rồi"
+  },
+  {
+    "id": "4",
+    "from": 0,
+    "date": "2024-06-07T09:01:30+07:00",
+    "msg": "Bài lý tao chưa làm, đợi tí tao chép của con Linh đã :v"
+  },
+  {
+    "id": "5",
+    "from": 1,
+    "date": "2024-06-07T09:02:00+07:00",
+    "msg": "Tao gửi đáp án nè, nhớ trả trà sữa cho tao nhé lũ mất dạy"
+  },
+  {
+    "id": "6",
+    "from": 2,
+    "date": "2024-06-07T09:02:30+07:00",
+    "msg": "Yêu vãi, mai tao bao trà sữa cho cả lũ luôn"
+  }
+]
