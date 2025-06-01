@@ -32,19 +32,17 @@ const Page = () => {
       const chatsList: ChatRowProps[] = [];
       querySnapshot.forEach((doc: QueryDocumentSnapshot<DocumentData>) => {
         const chatData = doc.data();
-        
         // Find the other participant
         const otherUserId = chatData.participantIds.find((pid: string) => pid !== currentUser.uid);
         const otherUserInfo = otherUserId ? chatData.participantInfo[otherUserId] : null;
-        
         // Format timestamp or use current date as fallback
         const timestamp = chatData.lastMessageAt || chatData.createdAt || new Date();
         const dateString = timestamp.toDate ? timestamp.toDate().toISOString() : new Date().toISOString();
-        
+        console.log(otherUserInfo?.photoURL)
         chatsList.push({
           id: doc.id,
           from: otherUserInfo?.displayName || 'Unknown User',
-          img: otherUserInfo?.photoURL || `https://ui-avatars.com/api/?name=Unknown`,
+          img: otherUserInfo?.photoURL || `https://avatars.githubusercontent.com/u/${171532562 + Math.floor(Math.random() * 1000)}`,
           msg: chatData.lastMessage?.text || 'Start chatting',
           date: dateString,
           read: true,

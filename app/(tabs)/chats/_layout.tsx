@@ -2,8 +2,42 @@ import Colors from '@/constants/Colors';
 import { Ionicons } from '@expo/vector-icons';
 import { Link, Stack } from 'expo-router';
 import { TouchableOpacity, View, Text, Image } from 'react-native';
+import { useLocalSearchParams } from 'expo-router';
+import { useEffect, useState } from 'react';
+import { doc, getDoc } from 'firebase/firestore';
+import { db, auth } from '@/firebase';
 
 const Layout = () => {
+  const { id } = useLocalSearchParams<{ id: string }>();
+  const [otherUser, setOtherUser] = useState<any>(null);
+
+  useEffect(() => {
+    const fetchOtherUser = async () => {
+      if (!id || !auth.currentUser) return;
+      
+      try {
+        // Get chat document
+        const chatDoc = await getDoc(doc(db, 'chats', id as string));
+        if (!chatDoc.exists()) return;
+        
+        const chatData = chatDoc.data();
+        
+        // Find other user
+        const otherUserId = chatData.participantIds.find((pid: string) => pid !== auth.currentUser?.uid);
+        if (!otherUserId) return;
+        
+        // Get other user info
+        const userDoc = await getDoc(doc(db, 'users', otherUserId));
+        console.log(userDoc.data())
+        setOtherUser(userDoc.data());
+      } catch (error) {
+        console.error('Error fetching other user:', error);
+      }
+    };
+    
+    fetchOtherUser();
+  }, [id]);
+
   return (
     <Stack>
       <Stack.Screen
@@ -59,11 +93,11 @@ const Layout = () => {
               }}>
               <Image
                 source={{
-                  uri: 'https://avatars.githubusercontent.com/u/34943910',
+                  uri: otherUser?.avatar || `https://avatars.githubusercontent.com/u/${171532562 + Math.floor(Math.random() * 1000)}`,
                 }}
                 style={{ width: 40, height: 40, borderRadius: 50 }}
               />
-              <Text style={{ fontSize: 16, fontWeight: '500' }}>Nguyễn Thế Vinh</Text>
+              <Text style={{ fontSize: 16, fontWeight: '500' }}>{otherUser?.name || 'User'}</Text>
             </View>
           ),
           headerRight: () => (
