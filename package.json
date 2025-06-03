@@ -34,6 +34,7 @@
     "react-dom": "18.2.0",
     "react-native": "0.73.2",
     "react-native-confirmation-code-field": "^7.3.2",
+    "react-native-emoji-selector": "^0.2.0",
     "react-native-gesture-handler": "~2.14.0",
     "react-native-gifted-chat": "^2.4.0",
     "react-native-keyboard-controller": "^1.17.2",
